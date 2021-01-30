@@ -1,0 +1,20 @@
+<h1>{{name}}</h1>
+<!--detail list-->
+<dl>
+    <td>Nombre</td>
+    <!--detail description-->
+    <dd>{{name}}</dd>
+
+    <td>edad</td>
+    <dd>{{edad}}</dd>
+
+    <td>Funcion</td>
+    <dd>{{getName()}}</dd>
+
+    <td>Capitalizado</td>
+   <!-- no se aconseja <dd>{{name.toUpperCase() }}</dd>  -->
+   <dd>{{nameInMayus}}</dd>
+</dl>
+
+<button (click)="changeName()">change hero</button>
+<button (click)="changeAge()">change age</button>

@@ -1,0 +1,26 @@
+<!-- forma 1 <div *ngIf="deletehero.length>0" abajo comprueba si tiene algo>-->
+<div *ngIf="deletehero;else noData">
+
+    <h3>Heroe borrado</h3>
+    <ul>
+        <li>{{deletehero}}</li>
+    </ul>
+</div>
+<!--lo que mostrara el else de acuerdo al name-->
+<ng-template #noData>
+    <h3>no ha borrado nada</h3>
+</ng-template>
+
+<button (click)="deleteHero()">
+    borrar
+</button>
+<h1>Lista de heroes</h1>
+<ul>
+    <li *ngFor="let hero of heores;let i = index">
+       {{i}} {{hero}}
+    </li>
+</ul>
+
+
+    
+
